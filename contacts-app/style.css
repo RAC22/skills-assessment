@@ -28,6 +28,7 @@ tr:nth-child(even) {
 .yellow-dot {
   background-color: rgb(247, 243, 3);
 }
+
 .red-dot {
   background-color: rgb(247, 19, 3);
 }

@@ -52,3 +52,7 @@ tr:hover {
 .unblur {
   filter: none;
 }
+
+a {
+  color: rgb(123, 243, 233);
+}

@@ -1,20 +1,46 @@
-table {
-  border: 1px ;
+table {  
+  overflow: hidden;
+  border-collapse: collapse;
   border-radius: 10px;
+  border-color: transparent;
   font-family: arial, sans-serif;
-  width: 50%;
-  background-color: #353535;
+  width: 280px;
+  height: 395px;
+  background: rgb(22, 22, 22);  
 }
-td, th {
+
+td, th {  
+  font-size: .9rem;
+  padding-left: 15px;
   text-align: left;
-  color: #dddddd;
+  color: #dddddd;  
+}
+
+td {
+  border: 1px solid black;
+}
+
+th {
+  font-size: 1rem;
+  padding: 15px;
+  background: linear-gradient(rgb(61,61,61),rgb(36,36,36));
 }
 
 tr:nth-child(even) {
-  background-color: #212121;
+  background-color: rgb(26, 26, 26);
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(32, 32, 32);
+}
+
+tfoot tr td {
+  padding: 16px;
+  border: none;
 }
 
 .dot {
+  margin-right: 8px;
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -41,19 +67,43 @@ tr:nth-child(even) {
   float: right;
 }
 
-tr:hover {
-  background-color: rgb(141, 141, 141);
-  cursor: pointer;
+tbody tr:hover {
+  background-color: rgb(73, 73, 73);
+ 
 }
 
 .blur-stuff {
-  filter: blur(1px);
+  background:rgba(6,6,6);
+  opacity: .2;
 }
 
-.unblur {
-  filter: none;
+.focus td{
+  border-color: rgb(73, 73, 73);
+  font-size: .8rem;
+}
+
+.focus a {
+  color: aqua;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.focus :nth-child(2) {
+  display: table-cell;
+  
 }
 
 a {
-  color: rgb(123, 243, 233);
+  text-decoration: none;
+  color: rgb(73, 73, 73);
+  font-size: .8rem;  
 }
+
+#mySelect {  
+  font-size: .75rem;
+  border-radius: 5px;
+  color: rgb(9,9,9);  
+}
+
+
+

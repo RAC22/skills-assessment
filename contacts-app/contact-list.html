@@ -5,61 +5,80 @@
         <title>Contact List</title>
     </head>
     <body>
-        <table id="contacts-table">
-            <thead>
-                <tr>
-                    <th>Contacts</th>
-                </tr>
+        <table id="contacts-table" cellspacing="0">
+            <thead>      
+                <tr>          
+                    <th colspan="2">Contacts</th>                       
+                </tr>       
             </thead>
             <tbody>
                 <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
-                    <td><span class="dot green-dot"></span>&nbsp;Lyndell</td>
+                    <td><span class="dot green-dot"></span>&nbsp;Christian</td>
                     <td>
-                        <span class="email"><a class="email" href="mailto:lgwyther0@unesco.org">lgwyther0@unesco.org</a></span>
+                        <span class="email"><a class="email" href="mailto:christian@yahoo.com">christian@yahoo.com</a></span>
                         <span class="hide phone">376-895-2322</span>
                         <span class="hide address">4158 Novick Point</span>
                     </td>
                 </tr>
                 <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
-                    <td><span class="dot green-dot"></span>&nbsp;Lyndell</td>
-                    <td>
-                        <span class="email"><a class="email" href="mailto:lgwyther0@unesco.org">lgwyther0@unesco.org</a></span>
+                    <td><span class="dot green-dot"></span>&nbsp;Rich</td>
+                    <td> 
+                        <span class="email"><a class="email" href="mailto:rich@tripod.com">rich@tripod.com</a></span>
                         <span class="hide phone">376-895-2322</span>
                         <span class="hide address">4158 Novick Point</span>
                     </td>
                 </tr>
                 <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
-                    <td><span class="dot green-dot"></span>&nbsp;Lyndell</td>
+                    <td><span class="dot green-dot"></span>&nbsp;Scott</td>
                     <td>
-                        <span class="email"><a class="email" href="mailto:lgwyther0@unesco.org">lgwyther0@unesco.org</a></span>
+                        <span class="email"><a class="email" href="mailto:scott@mailinator.com">scott@mailinator.com</a></span>
                         <span class="hide phone">376-895-2322</span>
                         <span class="hide address">4158 Novick Point</span>
                     </td>
                 </tr>
                 <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
-                    <td><span class="dot green-dot"></span>&nbsp;Lyndell</td>
+                    <td><span class="dot green-dot"></span>&nbsp;Danny</td>
                     <td>
-                        <span class="email"><a class="email" href="mailto:lgwyther0@unesco.org">lgwyther0@unesco.org</a></span>
+                        <span class="email"><a class="email" href="mailto:danny@hotmail.com">danny@hotmail.com</a></span>
                         <span class="hide phone">376-895-2322</span>
                         <span class="hide address">4158 Novick Point</span>
                     </td>
                 </tr>
                 <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
-                    <td><span class="dot green-dot"></span>&nbsp;Lyndell</td>
+                    <td><span class="dot red-dot"></span>&nbsp;Taka</td>
                     <td>
-                        <span class="email"><a class="email" href="mailto:lgwyther0@unesco.org">lgwyther0@unesco.org</a></span>
+                        <span class="email"><a class="email" href="mailto:taka@myspace.com">taka@myspace.com</a></span>
                         <span class="hide phone">376-895-2322</span>
                         <span class="hide address">4158 Novick Point</span>
                     </td>
                 </tr>
                 <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
-                    <td><span class="dot green-dot"></span>&nbsp;Lyndell</td>
+                    <td><span class="dot yellow-dot"></span>&nbsp;Tim</td>
                     <td>
-                        <span class="email"><a class="email" href="mailto:lgwyther0@unesco.org">lgwyther0@unesco.org</a></span>
+                        <span class="email"><a class="email" href="mailto:tim@netscape.com">tim@netscape.com</a></span>
                         <span class="hide phone">376-895-2322</span>
                         <span class="hide address">4158 Novick Point</span>
                     </td>
                 </tr>
+                <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
+                    <td><span class="dot green-dot"></span>&nbsp;Patrick</td>
+                    <td>
+                        <span class="email"><a class="email" href="mailto:patrick@live.com">patrick@live.com</a></span>
+                        <span class="hide phone">376-895-2322</span>
+                        <span class="hide address">4158 Novick Point</span>
+                    </td>
+                </tr>
+                <tr onmouseenter="showFull(this)" onmouseleave="hideFull(this)">
+                    <td><span class="dot yellow-dot"></span>&nbsp;Jacques</td>
+                    <td>
+                        <span class="email"><a class="email" href="mailto:jacques@aol.com">jacques@aol.com</a></span>
+                        <span class="hide phone">376-895-2322</span>
+                        <span class="hide address">4158 Novick Point</span>
+                    </td>
+                </tr>
+               
+            </tbody>
+            <tfoot>
                 <tr>
                     <td></td>
                     <td class="pull-right">
@@ -67,26 +86,40 @@
                                 <option value="email">Email address</option>
                                 <option value="phone">Phone number</option>
                             </select>
-                        </td>
-                    </tr>
-            </tbody>
-            <tfoot style="float:right;">
+                        </td>  
+                    </tr>              
             </tfoot>
         </table>
     </body>
 </html>
 <script>
-function showFull(e) {
+function showFull(e) {    
     let hidden = e.querySelectorAll(".hide");
     e.classList.add("focus");
     hidden.forEach(e => {
         e.classList.remove("hide");
     });
-
-    let unfocused = document.querySelectorAll("tr:not(.focus)");
+    let unfocused = document.querySelectorAll("tbody tr:not(.focus)");
     unfocused.forEach(e => {
         e.classList.add("blur-stuff");
     })
+    let bigRow = e.querySelector(".focus :nth-child(2)")
+    bigRow.rowSpan = "2"
+
+    let dtToHideForRoom = document.querySelector(".focus + tr > td:nth-child(2)")
+    dtToHideForRoom?.classList.add("hide")
+
+        //this was my idea for the bottom row to fill upwards.. but.. tables man. 
+    // if(dtToHideForRoom == undefined){
+    //     let currentNode = document.querySelector(".focus")
+    //     let previous = currentNode.previousElementSibling
+    //     let toHide = previous.querySelector("td:nth-child(2)")
+    //     toHide.classList.add("hide")
+       
+    // }else{
+    //     dtToHideForRoom.classList.add("hide")
+    // }
+        
 }
 
 function hideFull(e) {
@@ -103,7 +136,12 @@ function hideFull(e) {
 
     let unfocused = document.querySelectorAll("tr:not(.focus)");
     unfocused.forEach(e => {
-        e.classList.remove("blur-stuff");
+        e.classList.remove("blur-stuff");        
+    })
+    let allTds = document.querySelectorAll("td")
+    allTds.forEach(e => {
+        e.rowSpan = "1";
+        e.classList.remove("hide")
     })
 }
 
@@ -120,7 +158,6 @@ function selectChange(e) {
             e.classList.toggle("hide");
         })
     }
-
     elementsToShow.forEach(e => {
             e.classList.remove("hide");
     })

@@ -76,7 +76,6 @@
                         <span class="hide address">4158 Novick Point</span>
                     </td>
                 </tr>
-               
             </tbody>
             <tfoot>
                 <tr>
@@ -105,20 +104,15 @@ function showFull(e) {
     })
     let bigRow = e.querySelector(".focus :nth-child(2)")
     bigRow.rowSpan = "2"
-
-    let dtToHideForRoom = document.querySelector(".focus + tr > td:nth-child(2)")
-    dtToHideForRoom?.classList.add("hide")
-
-        //this was my idea for the bottom row to fill upwards.. but.. tables man. 
-    // if(dtToHideForRoom == undefined){
-    //     let currentNode = document.querySelector(".focus")
-    //     let previous = currentNode.previousElementSibling
-    //     let toHide = previous.querySelector("td:nth-child(2)")
-    //     toHide.classList.add("hide")
-       
-    // }else{
-    //     dtToHideForRoom.classList.add("hide")
-    // }
+    let dtToHideForRoom = document.querySelector(".focus + tr > td:nth-child(2)")       
+    if(dtToHideForRoom == null){
+        let currentNode = document.querySelector(".focus")
+        let previous = currentNode.previousElementSibling
+        let toHide = previous.querySelector("td:nth-child(2)")
+        bigRow.classList.add('special')
+    }else{
+        dtToHideForRoom?.classList.add("hide")
+    }
         
 }
 
@@ -142,6 +136,7 @@ function hideFull(e) {
     allTds.forEach(e => {
         e.rowSpan = "1";
         e.classList.remove("hide")
+        e.classList.remove("special")
     })
 }
 
@@ -162,4 +157,5 @@ function selectChange(e) {
             e.classList.remove("hide");
     })
 }
+
 </script>

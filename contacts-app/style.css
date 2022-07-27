@@ -5,7 +5,7 @@ table {
   border-color: transparent;
   font-family: arial, sans-serif;
   width: 280px;
-  height: 395px;
+  height: 411px;
   background: rgb(22, 22, 22);  
 }
 
@@ -69,7 +69,6 @@ tfoot tr td {
 
 tbody tr:hover {
   background-color: rgb(73, 73, 73);
- 
 }
 
 .blur-stuff {
@@ -79,7 +78,7 @@ tbody tr:hover {
 
 .focus td{
   border-color: rgb(73, 73, 73);
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 .focus a {
@@ -90,13 +89,12 @@ tbody tr:hover {
 
 .focus :nth-child(2) {
   display: table-cell;
-  
 }
 
 a {
   text-decoration: none;
   color: rgb(73, 73, 73);
-  font-size: .8rem;  
+  font-size: .9rem;  
 }
 
 #mySelect {  
@@ -104,6 +102,22 @@ a {
   border-radius: 5px;
   color: rgb(9,9,9);  
 }
-
+.phone {
+  font-size: .9rem;
+}
+.address{
+  font-size: .9rem;
+}
+td{
+  flex-direction: column;
+  height: 34px;
+}
+.special{
+  height: 68px;
+  position: absolute;
+  transform: translateY(-36px);
+  background: rgb(73, 73, 73);
+  padding-right: 40px;
+}
 
 

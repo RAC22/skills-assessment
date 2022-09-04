@@ -113,11 +113,11 @@ td{
   height: 34px;
 }
 .special{
-  height: 68px;
   position: absolute;
   transform: translateY(-36px);
   background: rgb(73, 73, 73);
   padding-right: 40px;
+  padding-top: 10px;
 }
 
 
